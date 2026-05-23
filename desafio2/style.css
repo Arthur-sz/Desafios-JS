@@ -1,0 +1,89 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: sans-serif;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+}
+.entrada {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+label {
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #000;
+    border-radius: 0;
+    background-color: #fff;
+    color: #000;
+    outline: none;
+    width: 180px;
+}
+
+/* Remove setas nativas */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+/* Botão */
+.botao {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#calcular {
+    padding: 10px 40px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+#calcular:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Resultados: 2 colunas */
+.resultados {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.resultados p {
+    padding: 12px 20px;
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 0.95rem;
+    min-width: 180px;
+}
